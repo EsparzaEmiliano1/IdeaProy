@@ -74,25 +74,6 @@ namespace WinFormsAppIdeaProy
                 selectedPictureBox.ImageLocation = filePath;
                 selectedPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
 
-                if (!string.IsNullOrWhiteSpace(textBoxNomProd.Text)) /// esto es para que con ayuda del comboBox poderle darle nombre al 
-                {                                                    /// label que esta arriba de la imagen para cada producto 
-                    if (selectedBox == "Producto 1")                 /// igual no se si sea mejor separarlo 
-                        labelNomProd1.Text = textBoxNomProd.Text;
-                    else if (selectedBox == "Producto 2")
-                        labelNomProd2.Text = textBoxNomProd.Text;
-                    else if (selectedBox == "Producto 3")
-                        labelNomProd3.Text = textBoxNomProd.Text;
-                    else if (selectedBox == "Producto 4")
-                        labelNomProd4.Text = textBoxNomProd.Text;
-                    else if (selectedBox == "Producto 5")
-                        labelNomProd5.Text = textBoxNomProd.Text;
-                    else if (selectedBox == "Producto 6")
-                        labelNomProd6.Text = textBoxNomProd.Text;
-                    else if (selectedBox == "Producto 7")
-                        labelNomProd7.Text = textBoxNomProd.Text;
-                    else if (selectedBox == "Producto 8")
-                        labelNomProd8.Text = textBoxNomProd.Text;
-                }
             }
         }
 

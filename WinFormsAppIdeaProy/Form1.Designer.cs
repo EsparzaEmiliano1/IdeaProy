@@ -48,7 +48,6 @@
             labelCargarImg = new Label();
             comboBox1 = new ComboBox();
             buttonCargImg = new Button();
-            textBoxNomProd = new TextBox();
             labelNomProd1 = new Label();
             labelNomProd2 = new Label();
             labelNomProd3 = new Label();
@@ -236,35 +235,27 @@
             labelCargarImg.AutoSize = true;
             labelCargarImg.Location = new Point(36, 55);
             labelCargarImg.Name = "labelCargarImg";
-            labelCargarImg.Size = new Size(94, 15);
+            labelCargarImg.Size = new Size(110, 15);
             labelCargarImg.TabIndex = 17;
-            labelCargarImg.Text = "Añadir Producto";
+            labelCargarImg.Text = "Modificar Producto";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(146, 81);
+            comboBox1.Location = new Point(160, 51);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(86, 23);
             comboBox1.TabIndex = 18;
             // 
             // buttonCargImg
             // 
-            buttonCargImg.Location = new Point(247, 52);
+            buttonCargImg.Location = new Point(252, 51);
             buttonCargImg.Name = "buttonCargImg";
             buttonCargImg.Size = new Size(95, 23);
             buttonCargImg.TabIndex = 19;
             buttonCargImg.Text = "Añadir";
             buttonCargImg.UseVisualStyleBackColor = true;
             buttonCargImg.Click += button9_Click;
-            // 
-            // textBoxNomProd
-            // 
-            textBoxNomProd.Location = new Point(146, 52);
-            textBoxNomProd.Name = "textBoxNomProd";
-            textBoxNomProd.PlaceholderText = "Nom Prod";
-            textBoxNomProd.Size = new Size(86, 23);
-            textBoxNomProd.TabIndex = 20;
             // 
             // labelNomProd1
             // 
@@ -353,7 +344,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(801, 642);
+            ClientSize = new Size(779, 639);
             Controls.Add(dataGridViewTicket);
             Controls.Add(labelNomProd8);
             Controls.Add(labelNomProd7);
@@ -363,7 +354,6 @@
             Controls.Add(labelNomProd3);
             Controls.Add(labelNomProd2);
             Controls.Add(labelNomProd1);
-            Controls.Add(textBoxNomProd);
             Controls.Add(buttonCargImg);
             Controls.Add(comboBox1);
             Controls.Add(labelCargarImg);
@@ -423,7 +413,6 @@
         private Label labelCargarImg;
         private ComboBox comboBox1;
         private Button buttonCargImg;
-        private TextBox textBoxNomProd;
         private Label labelNomProd1;
         private Label labelNomProd2;
         private Label labelNomProd3;

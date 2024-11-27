@@ -14,3 +14,4 @@ C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug
 C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\WinFormsAppIdeaProy.pdb
 C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\WinFormsAppIdeaProy.genruntimeconfig.cache
 C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\ref\WinFormsAppIdeaProy.dll
+C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\WinFormsAppIdeaProy.sourcelink.json
