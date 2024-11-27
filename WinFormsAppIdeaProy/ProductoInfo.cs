@@ -13,7 +13,7 @@ namespace WinFormsAppIdeaProy
     public int Stock { get; set; }
     public string Categoria { get; set; }
 
-    public Producto(string nombre, decimal precio, int stock, string categoria)
+    public ProductoInfo(string nombre, decimal precio, int stock, string categoria)
     {
         Nombre = nombre;
         Precio = precio;
