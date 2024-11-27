@@ -12,6 +12,8 @@ namespace WinFormsAppIdeaProy
 {
     public partial class Form2 : Form
     {
+        public ProductoInfo ProductoCreado { get; private set; }
+
         public Form2()
         {
             InitializeComponent();
@@ -36,7 +38,19 @@ namespace WinFormsAppIdeaProy
                 MessageBox.Show("Por favor, llena todos los campos.");
                 return;
             }
+            
+            ProductoInfo nuevoProducto = new ProductoInfo( // crea y guarda el producto
+                textBoxNomProd.Text,
+                decimal.Parse(textBoxPrecioUn.Text), // Convertir a decimal
+                int.Parse(textBoxStock.Text),     // Convertir a entero
+                comboBoxCategoria.SelectedItem.ToString()
+            );
 
+            ProductoCreado = nuevoProducto;
+
+            MessageBox.Show("Producto agregado correctamente.");
+            this.DialogResult = DialogResult.OK; // Indicar que los datos se guardaron
+            this.Close(); // Cerrar el formulario
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsAppIdeaProy
 {
-    internal class ProductoInfo
+    public class ProductoInfo
     {
     public string Nombre { get; set; }
     public decimal Precio { get; set; }

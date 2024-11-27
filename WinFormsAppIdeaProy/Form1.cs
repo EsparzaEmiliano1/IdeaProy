@@ -23,21 +23,40 @@ namespace WinFormsAppIdeaProy
             comboBox1.Items.Add("Producto 7");
             comboBox1.Items.Add("Producto 8");
         }
-
+        private List<ProductoInfo> productos = new List<ProductoInfo>();
         private void button9_Click(object sender, EventArgs e)
         {
-            OpenFileDialog abrirImagen = new OpenFileDialog();
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecciona un Producto antes de cargar la imagen.");
+                return;
+            }
 
+            Form2 form2 = new Form2();
+            string selectedBox = comboBox1.SelectedItem.ToString(); // Obtiene el producto seleccionado
+
+            if (form2.ShowDialog() == DialogResult.OK)
+            {
+                // Obtener el producto creado
+                ProductoInfo nuevoProducto = form2.ProductoCreado;
+
+                // Agregar el producto a la lista
+                productos.Add(nuevoProducto);
+
+                // Obtener el número de producto a partir del nombre seleccionado en el ComboBox
+                int productoNumero = int.Parse(selectedBox.Split(' ')[1]);
+
+                // Actualizar el nombre en el label correspondiente
+                Label labelProducto = (Label)this.Controls["labelNomProd" + productoNumero];
+                labelProducto.Text = nuevoProducto.Nombre; // Asignar el nombre del producto al label correspondiente
+            }
+
+            OpenFileDialog abrirImagen = new OpenFileDialog();
             if (abrirImagen.ShowDialog() == DialogResult.OK)
             {
-                if (comboBox1.SelectedItem == null)
-                {
-                    MessageBox.Show("Por favor, selecciona un PictureBox antes de cargar la imagen.");  /// el problema esta en que se abre primero el abrirImagen
-                    return;                                                                             /// y despues manda ese error prob sea mejor primero este 
-                }                                                                                       /// y luego abrir la imagen <hay que cambiarlo>
-                string selectedBox = comboBox1.SelectedItem.ToString();
                 PictureBox selectedPictureBox = null;
 
+                // Asignar el PictureBox correspondiente según el producto seleccionado
                 switch (selectedBox)
                 {
                     case "Producto 1":
@@ -65,15 +84,14 @@ namespace WinFormsAppIdeaProy
                         selectedPictureBox = pictureBoxProd8;
                         break;
                     default:
-                        MessageBox.Show("No se encontró el PictureBox seleccionado.");   /// otro fallo, cuando seleccionas o escribes algo que no es un producto #
-                        return;                                                          /// creo no salta este error por el comboBox
+                        MessageBox.Show("No se encontró el Producto seleccionado.");
+                        return;
                 }
-                //      pictureBoxProd1.ImageLocation = abrirImagen.FileName;
-                //        pictureBoxProd1.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                // Asignar la imagen al PictureBox correspondiente
                 string filePath = abrirImagen.FileName;
                 selectedPictureBox.ImageLocation = filePath;
                 selectedPictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
-
             }
         }
 
