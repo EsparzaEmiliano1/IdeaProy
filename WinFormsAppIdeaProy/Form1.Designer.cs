@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            labelPVCafe = new Label();
             pictureBoxProd1 = new PictureBox();
             pictureBoxProd2 = new PictureBox();
             pictureBoxProd3 = new PictureBox();
@@ -57,6 +56,7 @@
             labelNomProd7 = new Label();
             labelNomProd8 = new Label();
             dataGridViewTicket = new DataGridView();
+            labelPVCafe = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd3).BeginInit();
@@ -67,16 +67,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTicket).BeginInit();
             SuspendLayout();
-            // 
-            // labelPVCafe
-            // 
-            labelPVCafe.AutoSize = true;
-            labelPVCafe.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPVCafe.Location = new Point(247, 9);
-            labelPVCafe.Name = "labelPVCafe";
-            labelPVCafe.Size = new Size(260, 22);
-            labelPVCafe.TabIndex = 0;
-            labelPVCafe.Text = "Punto de venta de un café";
             // 
             // pictureBoxProd1
             // 
@@ -340,6 +330,16 @@
             dataGridViewTicket.TabIndex = 29;
             dataGridViewTicket.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // labelPVCafe
+            // 
+            labelPVCafe.AutoSize = true;
+            labelPVCafe.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelPVCafe.Location = new Point(247, 9);
+            labelPVCafe.Name = "labelPVCafe";
+            labelPVCafe.Size = new Size(260, 22);
+            labelPVCafe.TabIndex = 0;
+            labelPVCafe.Text = "Administrador officetemas\r\n";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -392,8 +392,6 @@
         }
 
         #endregion
-
-        private Label labelPVCafe;
         private PictureBox pictureBoxProd1;
         private PictureBox pictureBoxProd2;
         private PictureBox pictureBoxProd3;
@@ -422,5 +420,6 @@
         private Label labelNomProd7;
         private Label labelNomProd8;
         private DataGridView dataGridViewTicket;
+        private Label labelPVCafe;
     }
 }
