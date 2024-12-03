@@ -11,10 +11,10 @@ namespace WinFormsAppIdeaProy
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form3());
+           // Application.Run(new Form3());
 
             //// parte de administrador comentado para revisar el form3/formPortada
-            //Application.Run(new Form1());
+            Application.Run(new Form1());
         }
     }
 }
