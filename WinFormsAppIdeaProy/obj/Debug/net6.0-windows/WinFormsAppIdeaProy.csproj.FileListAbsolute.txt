@@ -17,3 +17,4 @@ C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug
 C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\WinFormsAppIdeaProy.sourcelink.json
 C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\WinFormsAppIdeaProy.Form2.resources
 C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\WinFormsAppIdeaProy.Form3.resources
+C:\Users\Emiliano\source\repos\WinFormsAppIdeaProy\WinFormsAppIdeaProy\obj\Debug\net6.0-windows\WinFormsAppIdeaProy.Form4.resources

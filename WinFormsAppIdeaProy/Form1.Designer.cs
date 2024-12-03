@@ -55,8 +55,12 @@
             labelNomProd6 = new Label();
             labelNomProd7 = new Label();
             labelNomProd8 = new Label();
-            dataGridViewTicket = new DataGridView();
             labelPVCafe = new Label();
+            buttonEliminar = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            buttonModificar = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd3).BeginInit();
@@ -65,14 +69,13 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd8).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewTicket).BeginInit();
             SuspendLayout();
             // 
             // pictureBoxProd1
             // 
             pictureBoxProd1.BackColor = SystemColors.ControlLight;
             pictureBoxProd1.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd1.Location = new Point(30, 131);
+            pictureBoxProd1.Location = new Point(182, 190);
             pictureBoxProd1.Name = "pictureBoxProd1";
             pictureBoxProd1.Size = new Size(137, 57);
             pictureBoxProd1.TabIndex = 1;
@@ -82,7 +85,7 @@
             // 
             pictureBoxProd2.BackColor = SystemColors.ControlLight;
             pictureBoxProd2.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd2.Location = new Point(225, 131);
+            pictureBoxProd2.Location = new Point(377, 190);
             pictureBoxProd2.Name = "pictureBoxProd2";
             pictureBoxProd2.Size = new Size(137, 57);
             pictureBoxProd2.TabIndex = 2;
@@ -92,7 +95,7 @@
             // 
             pictureBoxProd3.BackColor = SystemColors.ControlLight;
             pictureBoxProd3.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd3.Location = new Point(30, 252);
+            pictureBoxProd3.Location = new Point(559, 190);
             pictureBoxProd3.Name = "pictureBoxProd3";
             pictureBoxProd3.Size = new Size(137, 57);
             pictureBoxProd3.TabIndex = 3;
@@ -102,7 +105,7 @@
             // 
             pictureBoxProd4.BackColor = SystemColors.ControlLight;
             pictureBoxProd4.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd4.Location = new Point(225, 252);
+            pictureBoxProd4.Location = new Point(182, 313);
             pictureBoxProd4.Name = "pictureBoxProd4";
             pictureBoxProd4.Size = new Size(137, 57);
             pictureBoxProd4.TabIndex = 4;
@@ -112,7 +115,7 @@
             // 
             pictureBoxProd5.BackColor = SystemColors.ControlLight;
             pictureBoxProd5.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd5.Location = new Point(30, 369);
+            pictureBoxProd5.Location = new Point(377, 313);
             pictureBoxProd5.Name = "pictureBoxProd5";
             pictureBoxProd5.Size = new Size(137, 57);
             pictureBoxProd5.TabIndex = 5;
@@ -122,7 +125,7 @@
             // 
             pictureBoxProd6.BackColor = SystemColors.ControlLight;
             pictureBoxProd6.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd6.Location = new Point(225, 369);
+            pictureBoxProd6.Location = new Point(559, 313);
             pictureBoxProd6.Name = "pictureBoxProd6";
             pictureBoxProd6.Size = new Size(137, 57);
             pictureBoxProd6.TabIndex = 6;
@@ -132,7 +135,7 @@
             // 
             pictureBoxProd7.BackColor = SystemColors.ControlLight;
             pictureBoxProd7.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd7.Location = new Point(30, 491);
+            pictureBoxProd7.Location = new Point(182, 447);
             pictureBoxProd7.Name = "pictureBoxProd7";
             pictureBoxProd7.Size = new Size(137, 57);
             pictureBoxProd7.TabIndex = 7;
@@ -142,7 +145,7 @@
             // 
             pictureBoxProd8.BackColor = SystemColors.ControlLight;
             pictureBoxProd8.BorderStyle = BorderStyle.Fixed3D;
-            pictureBoxProd8.Location = new Point(225, 491);
+            pictureBoxProd8.Location = new Point(377, 447);
             pictureBoxProd8.Name = "pictureBoxProd8";
             pictureBoxProd8.Size = new Size(137, 57);
             pictureBoxProd8.TabIndex = 8;
@@ -150,7 +153,7 @@
             // 
             // button1
             // 
-            button1.Location = new Point(30, 193);
+            button1.Location = new Point(182, 252);
             button1.Name = "button1";
             button1.Size = new Size(137, 23);
             button1.TabIndex = 9;
@@ -159,7 +162,7 @@
             // 
             // button2
             // 
-            button2.Location = new Point(225, 193);
+            button2.Location = new Point(377, 252);
             button2.Name = "button2";
             button2.Size = new Size(137, 23);
             button2.TabIndex = 10;
@@ -168,7 +171,7 @@
             // 
             // button3
             // 
-            button3.Location = new Point(30, 315);
+            button3.Location = new Point(559, 253);
             button3.Name = "button3";
             button3.Size = new Size(137, 23);
             button3.TabIndex = 11;
@@ -177,7 +180,7 @@
             // 
             // button4
             // 
-            button4.Location = new Point(225, 315);
+            button4.Location = new Point(182, 376);
             button4.Name = "button4";
             button4.Size = new Size(137, 23);
             button4.TabIndex = 12;
@@ -186,7 +189,7 @@
             // 
             // button5
             // 
-            button5.Location = new Point(30, 432);
+            button5.Location = new Point(377, 376);
             button5.Name = "button5";
             button5.Size = new Size(137, 23);
             button5.TabIndex = 13;
@@ -195,7 +198,7 @@
             // 
             // button6
             // 
-            button6.Location = new Point(225, 432);
+            button6.Location = new Point(559, 376);
             button6.Name = "button6";
             button6.Size = new Size(137, 23);
             button6.TabIndex = 14;
@@ -204,7 +207,7 @@
             // 
             // button7
             // 
-            button7.Location = new Point(225, 554);
+            button7.Location = new Point(377, 510);
             button7.Name = "button7";
             button7.Size = new Size(137, 23);
             button7.TabIndex = 16;
@@ -213,7 +216,7 @@
             // 
             // button8
             // 
-            button8.Location = new Point(30, 554);
+            button8.Location = new Point(182, 510);
             button8.Name = "button8";
             button8.Size = new Size(137, 23);
             button8.TabIndex = 15;
@@ -223,23 +226,23 @@
             // labelCargarImg
             // 
             labelCargarImg.AutoSize = true;
-            labelCargarImg.Location = new Point(36, 55);
+            labelCargarImg.Location = new Point(33, 164);
             labelCargarImg.Name = "labelCargarImg";
-            labelCargarImg.Size = new Size(110, 15);
+            labelCargarImg.Size = new Size(56, 15);
             labelCargarImg.TabIndex = 17;
-            labelCargarImg.Text = "Modificar Producto";
+            labelCargarImg.Text = "Producto";
             // 
             // comboBox1
             // 
             comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(160, 51);
+            comboBox1.Location = new Point(33, 195);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(86, 23);
             comboBox1.TabIndex = 18;
             // 
             // buttonCargImg
             // 
-            buttonCargImg.Location = new Point(252, 51);
+            buttonCargImg.Location = new Point(33, 244);
             buttonCargImg.Name = "buttonCargImg";
             buttonCargImg.Size = new Size(95, 23);
             buttonCargImg.TabIndex = 19;
@@ -250,7 +253,7 @@
             // labelNomProd1
             // 
             labelNomProd1.AutoSize = true;
-            labelNomProd1.Location = new Point(30, 107);
+            labelNomProd1.Location = new Point(182, 166);
             labelNomProd1.Name = "labelNomProd1";
             labelNomProd1.Size = new Size(122, 15);
             labelNomProd1.TabIndex = 21;
@@ -259,7 +262,7 @@
             // labelNomProd2
             // 
             labelNomProd2.AutoSize = true;
-            labelNomProd2.Location = new Point(225, 107);
+            labelNomProd2.Location = new Point(377, 166);
             labelNomProd2.Name = "labelNomProd2";
             labelNomProd2.Size = new Size(122, 15);
             labelNomProd2.TabIndex = 22;
@@ -268,7 +271,7 @@
             // labelNomProd3
             // 
             labelNomProd3.AutoSize = true;
-            labelNomProd3.Location = new Point(30, 234);
+            labelNomProd3.Location = new Point(559, 172);
             labelNomProd3.Name = "labelNomProd3";
             labelNomProd3.Size = new Size(122, 15);
             labelNomProd3.TabIndex = 23;
@@ -277,7 +280,7 @@
             // labelNomProd4
             // 
             labelNomProd4.AutoSize = true;
-            labelNomProd4.Location = new Point(225, 234);
+            labelNomProd4.Location = new Point(182, 295);
             labelNomProd4.Name = "labelNomProd4";
             labelNomProd4.Size = new Size(122, 15);
             labelNomProd4.TabIndex = 24;
@@ -286,7 +289,7 @@
             // labelNomProd5
             // 
             labelNomProd5.AutoSize = true;
-            labelNomProd5.Location = new Point(30, 351);
+            labelNomProd5.Location = new Point(377, 295);
             labelNomProd5.Name = "labelNomProd5";
             labelNomProd5.Size = new Size(122, 15);
             labelNomProd5.TabIndex = 25;
@@ -295,7 +298,7 @@
             // labelNomProd6
             // 
             labelNomProd6.AutoSize = true;
-            labelNomProd6.Location = new Point(225, 351);
+            labelNomProd6.Location = new Point(559, 295);
             labelNomProd6.Name = "labelNomProd6";
             labelNomProd6.Size = new Size(122, 15);
             labelNomProd6.TabIndex = 26;
@@ -304,7 +307,7 @@
             // labelNomProd7
             // 
             labelNomProd7.AutoSize = true;
-            labelNomProd7.Location = new Point(30, 473);
+            labelNomProd7.Location = new Point(182, 429);
             labelNomProd7.Name = "labelNomProd7";
             labelNomProd7.Size = new Size(122, 15);
             labelNomProd7.TabIndex = 27;
@@ -313,39 +316,79 @@
             // labelNomProd8
             // 
             labelNomProd8.AutoSize = true;
-            labelNomProd8.Location = new Point(225, 473);
+            labelNomProd8.Location = new Point(377, 429);
             labelNomProd8.Name = "labelNomProd8";
             labelNomProd8.RightToLeft = RightToLeft.No;
             labelNomProd8.Size = new Size(122, 15);
             labelNomProd8.TabIndex = 28;
             labelNomProd8.Text = "Producto indefinido 8";
             // 
-            // dataGridViewTicket
-            // 
-            dataGridViewTicket.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTicket.Location = new Point(424, 131);
-            dataGridViewTicket.Name = "dataGridViewTicket";
-            dataGridViewTicket.RowTemplate.Height = 25;
-            dataGridViewTicket.Size = new Size(344, 446);
-            dataGridViewTicket.TabIndex = 29;
-            dataGridViewTicket.CellContentClick += dataGridView1_CellContentClick;
-            // 
             // labelPVCafe
             // 
             labelPVCafe.AutoSize = true;
             labelPVCafe.Font = new Font("Consolas", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            labelPVCafe.Location = new Point(247, 9);
+            labelPVCafe.Location = new Point(254, 9);
             labelPVCafe.Name = "labelPVCafe";
             labelPVCafe.Size = new Size(260, 22);
             labelPVCafe.TabIndex = 0;
             labelPVCafe.Text = "Administrador officetemas\r\n";
             // 
+            // buttonEliminar
+            // 
+            buttonEliminar.Location = new Point(33, 331);
+            buttonEliminar.Name = "buttonEliminar";
+            buttonEliminar.Size = new Size(95, 23);
+            buttonEliminar.TabIndex = 29;
+            buttonEliminar.Text = "Eliminar";
+            buttonEliminar.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(336, 74);
+            label1.Name = "label1";
+            label1.Size = new Size(49, 15);
+            label1.TabIndex = 30;
+            label1.Text = "regresar";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(449, 74);
+            label2.Name = "label2";
+            label2.Size = new Size(31, 15);
+            label2.TabIndex = 31;
+            label2.Text = "salir ";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(203, 74);
+            label3.Name = "label3";
+            label3.Size = new Size(54, 15);
+            label3.TabIndex = 32;
+            label3.Text = "usuarios ";
+            // 
+            // buttonModificar
+            // 
+            buttonModificar.Location = new Point(33, 288);
+            buttonModificar.Name = "buttonModificar";
+            buttonModificar.Size = new Size(95, 23);
+            buttonModificar.TabIndex = 33;
+            buttonModificar.Text = "Modificar";
+            buttonModificar.UseVisualStyleBackColor = true;
+            buttonModificar.Click += buttonModificar_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(779, 639);
-            Controls.Add(dataGridViewTicket);
+            ClientSize = new Size(754, 595);
+            Controls.Add(buttonModificar);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(buttonEliminar);
             Controls.Add(labelNomProd8);
             Controls.Add(labelNomProd7);
             Controls.Add(labelNomProd6);
@@ -386,7 +429,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd8).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewTicket).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -419,7 +461,11 @@
         private Label labelNomProd6;
         private Label labelNomProd7;
         private Label labelNomProd8;
-        private DataGridView dataGridViewTicket;
         private Label labelPVCafe;
+        private Button buttonEliminar;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Button buttonModificar;
     }
 }

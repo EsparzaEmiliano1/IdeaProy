@@ -26,9 +26,9 @@ namespace WinFormsAppIdeaProy
         private List<ProductoInfo> productos = new List<ProductoInfo>();
         private void button9_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem == null)
+            if (comboBox1.SelectedItem == null)// hay que revisar que exista un producto antes de esto, pero para eso necesito que me ayuden chinga 
             {
-                MessageBox.Show("Por favor, selecciona un Producto antes de cargar la imagen.");
+                MessageBox.Show("Por favor, selecciona un Producto valido antes de añadir");
                 return;
             }
 
@@ -97,13 +97,13 @@ namespace WinFormsAppIdeaProy
 
         private void Iniciar()
         {
-            ticket = new DataTable();
-            ticket.Columns.Add("Producto");
-            ticket.Columns.Add("Categoria");
-            ticket.Columns.Add("Existencia");
-            ticket.Columns.Add("Precio");
-            //ticket.Rows.Add("");          ///Hay que poner numeracion de cuantos productos/conjunto de productos van (?) 
-            dataGridViewTicket.DataSource = ticket;
+            //ticket = new DataTable();
+            //ticket.Columns.Add("Producto");
+            //ticket.Columns.Add("Categoria");
+            //ticket.Columns.Add("Existencia");
+            //ticket.Columns.Add("Precio");
+            ////ticket.Rows.Add("");          ///Hay que poner numeracion de cuantos productos/conjunto de productos van (?) 
+            //dataGridViewTicket.DataSource = ticket;
 
         }
 
@@ -120,7 +120,7 @@ namespace WinFormsAppIdeaProy
         //    dato.Guardar(modelo);
 
         //}
-        
+
 
         private void labelProdNum1_Click(object sender, EventArgs e)
         {
@@ -129,6 +129,25 @@ namespace WinFormsAppIdeaProy
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void buttonModificar_Click(object sender, EventArgs e)
+        {
+            // hay que revisar que exista un producto antes de esto, pero para eso necesito que me ayuden chinga
+
+            if (comboBox1.SelectedItem == null)   
+            {
+                MessageBox.Show("Por favor, selecciona un producto valido a modificar");
+                return;
+            }
+            else
+            {
+                string selectedOption = comboBox1.SelectedItem.ToString();
+                Form4 formMod = new Form4(selectedOption);
+                formMod.ShowDialog();
+            }
+
 
         }
     }
