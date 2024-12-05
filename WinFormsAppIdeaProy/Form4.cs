@@ -12,14 +12,21 @@ namespace WinFormsAppIdeaProy
 {
     public partial class Form4 : Form
     {
-        
+
+        ProductoInfo producto;
+
         private string productoSeleccionado;
-        public Form4(string option)
+        public Form4(ProductoInfo producto)
         {
             InitializeComponent();
-            productoSeleccionado = option;
-            // Usa el valor como desees, por ejemplo:
+
             labelOption.Text = productoSeleccionado; // Si tienes un Label para mostrarlo
+            this.producto = producto;
+
+            textBoxNomProd.Text = producto.Nombre;
+            textBoxPrecioUn.Text = producto.Precio.ToString();
+            textBoxStock.Text = producto.Stock.ToString();
+            comboBoxCategoriaModf.Text = producto.Categoria;
         }
 
         private void comboBoxCategoria_SelectedIndexChanged(object sender, EventArgs e)
@@ -33,6 +40,22 @@ namespace WinFormsAppIdeaProy
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form4_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonModf_Click(object sender, EventArgs e)
+        {
+            producto.Nombre = textBoxNomProd.Text;
+            producto.Precio = decimal.Parse(textBoxPrecioUn.Text);
+            producto.Stock = int.Parse(textBoxStock.Text);
+            producto.Categoria = comboBoxCategoriaModf.Text;
+
+            this.DialogResult = DialogResult.OK; // Marca que se realizó una acción
+            this.Close();
         }
     }
 }

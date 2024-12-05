@@ -61,6 +61,7 @@
             label2 = new Label();
             label3 = new Label();
             buttonModificar = new Button();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBoxProd3).BeginInit();
@@ -379,11 +380,21 @@
             buttonModificar.UseVisualStyleBackColor = true;
             buttonModificar.Click += buttonModificar_Click;
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(565, 442);
+            label4.Name = "label4";
+            label4.Size = new Size(139, 15);
+            label4.TabIndex = 34;
+            label4.Text = "Ponemos otro producto?";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(754, 595);
+            Controls.Add(label4);
             Controls.Add(buttonModificar);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -467,5 +478,6 @@
         private Label label2;
         private Label label3;
         private Button buttonModificar;
+        private Label label4;
     }
 }

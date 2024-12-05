@@ -12,11 +12,14 @@ namespace WinFormsAppIdeaProy
 {
     public partial class Form2 : Form
     {
+        private int productoID;
         public ProductoInfo ProductoCreado { get; private set; }
 
-        public Form2()
+
+        public Form2(int id)
         {
             InitializeComponent();
+            productoID = id; // Establece el ID recibido
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -38,19 +41,21 @@ namespace WinFormsAppIdeaProy
                 MessageBox.Show("Por favor, llena todos los campos.");
                 return;
             }
-            
-            ProductoInfo nuevoProducto = new ProductoInfo( // crea y guarda el producto
+
+            // Crear el producto con el ID proporcionado
+            ProductoInfo nuevoProducto = new ProductoInfo(
+                productoID,
                 textBoxNomProd.Text,
-                decimal.Parse(textBoxPrecioUn.Text), // Convertir a decimal
-                int.Parse(textBoxStock.Text),     // Convertir a entero
+                decimal.Parse(textBoxPrecioUn.Text),
+                int.Parse(textBoxStock.Text),
                 comboBoxCategoria.SelectedItem.ToString()
             );
 
             ProductoCreado = nuevoProducto;
 
             MessageBox.Show("Producto agregado correctamente.");
-            this.DialogResult = DialogResult.OK; // Indicar que los datos se guardaron
-            this.Close(); // Cerrar el formulario
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

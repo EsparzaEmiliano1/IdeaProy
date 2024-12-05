@@ -38,12 +38,13 @@
             textBoxPrecioUn = new TextBox();
             textBoxNomProd = new TextBox();
             labelOption = new Label();
+            buttonModf = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(151, 33);
+            label1.Location = new Point(125, 29);
             label1.Name = "label1";
             label1.Size = new Size(150, 15);
             label1.TabIndex = 0;
@@ -53,7 +54,7 @@
             // comboBoxCategoriaModf
             // 
             comboBoxCategoriaModf.FormattingEnabled = true;
-            comboBoxCategoriaModf.Location = new Point(151, 202);
+            comboBoxCategoriaModf.Location = new Point(225, 205);
             comboBoxCategoriaModf.Name = "comboBoxCategoriaModf";
             comboBoxCategoriaModf.Size = new Size(107, 23);
             comboBoxCategoriaModf.TabIndex = 38;
@@ -62,7 +63,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(23, 205);
+            label6.Location = new Point(97, 208);
             label6.Name = "label6";
             label6.Size = new Size(58, 15);
             label6.TabIndex = 37;
@@ -71,7 +72,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(23, 169);
+            label4.Location = new Point(97, 172);
             label4.Name = "label4";
             label4.Size = new Size(94, 15);
             label4.TabIndex = 36;
@@ -79,7 +80,7 @@
             // 
             // textBoxStock
             // 
-            textBoxStock.Location = new Point(151, 166);
+            textBoxStock.Location = new Point(225, 169);
             textBoxStock.Name = "textBoxStock";
             textBoxStock.Size = new Size(107, 23);
             textBoxStock.TabIndex = 35;
@@ -87,7 +88,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(23, 129);
+            label3.Location = new Point(97, 132);
             label3.Name = "label3";
             label3.Size = new Size(84, 15);
             label3.TabIndex = 34;
@@ -96,7 +97,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(23, 88);
+            label2.Location = new Point(97, 91);
             label2.Name = "label2";
             label2.Size = new Size(122, 15);
             label2.TabIndex = 33;
@@ -104,14 +105,14 @@
             // 
             // textBoxPrecioUn
             // 
-            textBoxPrecioUn.Location = new Point(151, 126);
+            textBoxPrecioUn.Location = new Point(225, 129);
             textBoxPrecioUn.Name = "textBoxPrecioUn";
             textBoxPrecioUn.Size = new Size(107, 23);
             textBoxPrecioUn.TabIndex = 32;
             // 
             // textBoxNomProd
             // 
-            textBoxNomProd.Location = new Point(151, 85);
+            textBoxNomProd.Location = new Point(225, 88);
             textBoxNomProd.Name = "textBoxNomProd";
             textBoxNomProd.Size = new Size(107, 23);
             textBoxNomProd.TabIndex = 31;
@@ -119,17 +120,28 @@
             // labelOption
             // 
             labelOption.AutoSize = true;
-            labelOption.Location = new Point(321, 33);
+            labelOption.Location = new Point(281, 29);
             labelOption.Name = "labelOption";
             labelOption.Size = new Size(37, 15);
             labelOption.TabIndex = 39;
             labelOption.Text = "          ";
             // 
+            // buttonModf
+            // 
+            buttonModf.Location = new Point(154, 265);
+            buttonModf.Name = "buttonModf";
+            buttonModf.Size = new Size(110, 29);
+            buttonModf.TabIndex = 40;
+            buttonModf.Text = "Modificar";
+            buttonModf.UseVisualStyleBackColor = true;
+            buttonModf.Click += buttonModf_Click;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(498, 379);
+            ClientSize = new Size(440, 350);
+            Controls.Add(buttonModf);
             Controls.Add(labelOption);
             Controls.Add(comboBoxCategoriaModf);
             Controls.Add(label6);
@@ -142,6 +154,7 @@
             Controls.Add(label1);
             Name = "Form4";
             Text = "Form4";
+            Load += Form4_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -158,5 +171,6 @@
         private TextBox textBoxPrecioUn;
         private TextBox textBoxNomProd;
         private Label labelOption;
+        private Button buttonModf;
     }
 }
