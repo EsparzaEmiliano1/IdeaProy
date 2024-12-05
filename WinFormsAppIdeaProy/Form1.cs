@@ -13,6 +13,7 @@ namespace WinFormsAppIdeaProy
         public Form1()
         {
             InitializeComponent();
+            InicializarProductosPorDefecto();
             Iniciar();
         }
         //Declara un diccionario global para relacionar los nombres del ComboBox con los IDs de productos.
@@ -22,6 +23,15 @@ namespace WinFormsAppIdeaProy
         {
             InicializarComboBox();
         }
+        
+        private void InicializarProductosPorDefecto()
+        {
+            for (int i = 1; i <= 8; i++) // suponiendo que tenemos 8 productos
+            {
+                productos.Add(new ProductoInfo(i, $"Producto {i}", 0m, 0, "Sin categoría"));
+            }
+        }
+
         private void InicializarComboBox()
         {
             comboBoxMapping.Clear();
@@ -45,6 +55,7 @@ namespace WinFormsAppIdeaProy
         }
 
         private List<ProductoInfo> productos = new List<ProductoInfo>();
+        
         private void button9_Click(object sender, EventArgs e)
         {
             if (comboBox1.SelectedItem == null)
@@ -63,25 +74,34 @@ namespace WinFormsAppIdeaProy
                 return;
             }
 
-            // Busca el producto en la lista según el ID
+            // El producto siempre estará inicializado, así que podemos buscarlo directamente
             ProductoInfo productoSeleccionado = productos.FirstOrDefault(p => p.Id == productID);
 
-            if (productoSeleccionado == null)
-            {
-                MessageBox.Show($"No se encontró el producto con ID {productID}.");
-                return;
-            }
 
             // Mostrar el Form2 para editar o agregar información
             Form2 form2 = new Form2(productoSeleccionado.Id);
             if (form2.ShowDialog() == DialogResult.OK)
             {
                 ProductoInfo nuevoProducto = form2.ProductoCreado;
-                productos.Add(nuevoProducto);
+                productoSeleccionado.Nombre = nuevoProducto.Nombre;
+                productoSeleccionado.Precio = nuevoProducto.Precio;
+                productoSeleccionado.Stock = nuevoProducto.Stock;
+                productoSeleccionado.Categoria = nuevoProducto.Categoria;
 
-                // Reflejar los cambios en el ComboBox o cualquier otra parte de la UI
-                MessageBox.Show($"Producto {nuevoProducto.Nombre} añadido correctamente.");
+                MessageBox.Show($"Producto {productoSeleccionado.Nombre} actualizado correctamente.");
             }
+            // Verificar si el producto ya está registrado (tiene datos válidos)
+            //if (productoSeleccionado == null ||
+            //    string.IsNullOrWhiteSpace(productoSeleccionado.Nombre) ||
+            //    productoSeleccionado.Precio <= 0 ||
+            //    productoSeleccionado.Stock <= 0 ||
+            //    string.IsNullOrWhiteSpace(productoSeleccionado.Categoria))
+            //{
+            //    MessageBox.Show("El producto seleccionado aún no está registrado. Por favor, añádelo primero.");
+            //    return;
+
+            //}
+
         }
 
         private PictureBox ObtenerPictureBox(int idProducto)
