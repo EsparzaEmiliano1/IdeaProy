@@ -24,6 +24,7 @@ namespace WinFormsAppIdeaProy
             this.producto = producto;
 
             textBoxNomProd.Text = producto.Nombre;
+            textBoxDescrp.Text = producto.Descripcion;
             textBoxPrecioUn.Text = producto.Precio.ToString();
             textBoxStock.Text = producto.Stock.ToString();
             comboBoxCategoriaModf.Text = producto.Categoria;
@@ -44,18 +45,23 @@ namespace WinFormsAppIdeaProy
 
         private void Form4_Load(object sender, EventArgs e)
         {
-
         }
 
         private void buttonModf_Click(object sender, EventArgs e)
         {
             producto.Nombre = textBoxNomProd.Text;
+            producto.Descripcion = textBoxDescrp.Text;
             producto.Precio = decimal.Parse(textBoxPrecioUn.Text);
             producto.Stock = int.Parse(textBoxStock.Text);
             producto.Categoria = comboBoxCategoriaModf.Text;
 
             this.DialogResult = DialogResult.OK; // Marca que se realizó una acción
             this.Close();
+        }
+
+        private void textBoxNomProd_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

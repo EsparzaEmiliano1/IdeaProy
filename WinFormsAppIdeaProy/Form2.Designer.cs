@@ -39,6 +39,8 @@
             button1 = new Button();
             label6 = new Label();
             comboBoxCategoria = new ComboBox();
+            label7 = new Label();
+            textBoxDescrip = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -55,15 +57,15 @@
             textBoxNomProd.Location = new Point(151, 75);
             textBoxNomProd.Name = "textBoxNomProd";
             textBoxNomProd.PlaceholderText = "Nom Prod";
-            textBoxNomProd.Size = new Size(107, 23);
+            textBoxNomProd.Size = new Size(138, 23);
             textBoxNomProd.TabIndex = 21;
             // 
             // textBoxPrecioUn
             // 
-            textBoxPrecioUn.Location = new Point(151, 116);
+            textBoxPrecioUn.Location = new Point(151, 146);
             textBoxPrecioUn.Name = "textBoxPrecioUn";
             textBoxPrecioUn.PlaceholderText = "$";
-            textBoxPrecioUn.Size = new Size(107, 23);
+            textBoxPrecioUn.Size = new Size(138, 23);
             textBoxPrecioUn.TabIndex = 22;
             // 
             // label2
@@ -78,7 +80,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(23, 119);
+            label3.Location = new Point(23, 149);
             label3.Name = "label3";
             label3.Size = new Size(84, 15);
             label3.TabIndex = 24;
@@ -87,7 +89,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(23, 159);
+            label4.Location = new Point(23, 189);
             label4.Name = "label4";
             label4.Size = new Size(94, 15);
             label4.TabIndex = 26;
@@ -95,10 +97,10 @@
             // 
             // textBoxStock
             // 
-            textBoxStock.Location = new Point(151, 156);
+            textBoxStock.Location = new Point(151, 186);
             textBoxStock.Name = "textBoxStock";
             textBoxStock.PlaceholderText = "pz";
-            textBoxStock.Size = new Size(107, 23);
+            textBoxStock.Size = new Size(138, 23);
             textBoxStock.TabIndex = 25;
             // 
             // label5
@@ -123,7 +125,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(23, 195);
+            label6.Location = new Point(23, 225);
             label6.Name = "label6";
             label6.Size = new Size(58, 15);
             label6.TabIndex = 29;
@@ -132,16 +134,35 @@
             // comboBoxCategoria
             // 
             comboBoxCategoria.FormattingEnabled = true;
-            comboBoxCategoria.Location = new Point(151, 192);
+            comboBoxCategoria.Location = new Point(151, 222);
             comboBoxCategoria.Name = "comboBoxCategoria";
-            comboBoxCategoria.Size = new Size(107, 23);
+            comboBoxCategoria.Size = new Size(138, 23);
             comboBoxCategoria.TabIndex = 30;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(23, 110);
+            label7.Name = "label7";
+            label7.Size = new Size(65, 15);
+            label7.TabIndex = 32;
+            label7.Text = "Descipcion";
+            // 
+            // textBoxDescrip
+            // 
+            textBoxDescrip.Location = new Point(151, 107);
+            textBoxDescrip.Name = "textBoxDescrip";
+            textBoxDescrip.PlaceholderText = "Descripcion";
+            textBoxDescrip.Size = new Size(138, 23);
+            textBoxDescrip.TabIndex = 31;
             // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(540, 329);
+            Controls.Add(label7);
+            Controls.Add(textBoxDescrip);
             Controls.Add(comboBoxCategoria);
             Controls.Add(label6);
             Controls.Add(button1);
@@ -173,5 +194,7 @@
         private Button button1;
         private Label label6;
         private ComboBox comboBoxCategoria;
+        private Label label7;
+        private TextBox textBoxDescrip;
     }
 }

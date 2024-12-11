@@ -34,6 +34,7 @@ namespace WinFormsAppIdeaProy
         {
             // Validar que los campos no estén vacíos
             if (string.IsNullOrEmpty(textBoxNomProd.Text) ||
+                string.IsNullOrEmpty(textBoxDescrip.Text) ||
                 string.IsNullOrEmpty(textBoxPrecioUn.Text) ||
                 string.IsNullOrEmpty(textBoxStock.Text) ||
                 comboBoxCategoria.SelectedItem == null)
@@ -46,6 +47,7 @@ namespace WinFormsAppIdeaProy
             ProductoInfo nuevoProducto = new ProductoInfo(
                 productoID,
                 textBoxNomProd.Text,
+                textBoxDescrip.Text,
                 decimal.Parse(textBoxPrecioUn.Text),
                 int.Parse(textBoxStock.Text),
                 comboBoxCategoria.SelectedItem.ToString()

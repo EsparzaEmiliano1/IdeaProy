@@ -42,7 +42,7 @@ namespace WinFormsAppIdeaProy
         {
             for (int i = 1; i <= 8; i++)
             {
-                productos.Add(new ProductoInfo(i, $"Producto {i}", 0m, 0, "Sin categoría"));
+                productos.Add(new ProductoInfo(i, $"Producto {i}", "Sin descripcion", 0m, 0, "Sin categoría"));
             }
         }
 
@@ -95,6 +95,7 @@ namespace WinFormsAppIdeaProy
             {
                 ProductoInfo nuevoProducto = form2.ProductoCreado;
                 productoSeleccionado.Nombre = nuevoProducto.Nombre;
+                productoSeleccionado.Descripcion = nuevoProducto.Descripcion;
                 productoSeleccionado.Precio = nuevoProducto.Precio;
                 productoSeleccionado.Stock = nuevoProducto.Stock;
                 productoSeleccionado.Categoria = nuevoProducto.Categoria;
@@ -199,6 +200,7 @@ namespace WinFormsAppIdeaProy
             // Muestra los datos del producto
             string datosProducto = $"ID: {productoSeleccionado.Id}\n" +
                                    $"Nombre: {productoSeleccionado.Nombre}\n" +
+                                    $"Descripcion: {productoSeleccionado.Descripcion}\n" +
                                    $"Precio: {productoSeleccionado.Precio:C}\n" +
                                    $"Stock: {productoSeleccionado.Stock}\n" +
                                    $"Categoría: {productoSeleccionado.Categoria}";
@@ -223,6 +225,7 @@ namespace WinFormsAppIdeaProy
             {
                 // Restablecer los valores predeterminados del producto
                 productoSeleccionado.Nombre = $"Producto {productoSeleccionado.Id}";
+                productoSeleccionado.Descripcion = $"Sin descripcion ";
                 productoSeleccionado.Precio = 0m;
                 productoSeleccionado.Stock = 0;
                 productoSeleccionado.Categoria = "Sin categoría";
@@ -253,13 +256,13 @@ namespace WinFormsAppIdeaProy
             // Muestra los datos del producto
             string datosProducto = $"ID: {productoSeleccionado.Id}\n" +
                                    $"Nombre: {productoSeleccionado.Nombre}\n" +
+                                   $"Descripcion: {productoSeleccionado.Descripcion}\n" +
                                    $"Precio: {productoSeleccionado.Precio:C}\n" +
                                    $"Stock: {productoSeleccionado.Stock}\n" +
                                    $"Categoría: {productoSeleccionado.Categoria}";
 
             MessageBox.Show(datosProducto, "Información del Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             int productID = 1; // ID del producto que este botón siempre mostrará
@@ -270,31 +273,27 @@ namespace WinFormsAppIdeaProy
             int productID = 2; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             int productID = 3; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
         }
-
         private void button4_Click(object sender, EventArgs e)
         {
             int productID = 4; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
         }
-
         private void button5_Click(object sender, EventArgs e)
         {
             int productID = 5; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
         }
-
         private void button6_Click(object sender, EventArgs e)
         {
             int productID = 6; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
         }
-        pgit rivate void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
             int productID = 7; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
@@ -305,5 +304,9 @@ namespace WinFormsAppIdeaProy
             MostrarDatosProducto(productID); // Llama a la función reutilizable
         }
 
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

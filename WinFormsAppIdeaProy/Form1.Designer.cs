@@ -178,6 +178,7 @@
             button3.Name = "button3";
             button3.Size = new Size(137, 23);
             button3.TabIndex = 11;
+            button3.Text = "Mostrar datos";
             button3.UseVisualStyleBackColor = true;
             button3.Click += button3_Click;
             // 
@@ -187,7 +188,7 @@
             button4.Name = "button4";
             button4.Size = new Size(137, 23);
             button4.TabIndex = 12;
-            button4.Text = "button4";
+            button4.Text = "Mostrar datos";
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
@@ -197,7 +198,7 @@
             button5.Name = "button5";
             button5.Size = new Size(137, 23);
             button5.TabIndex = 13;
-            button5.Text = "button5";
+            button5.Text = "Mostrar datos";
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
@@ -207,7 +208,7 @@
             button6.Name = "button6";
             button6.Size = new Size(137, 23);
             button6.TabIndex = 14;
-            button6.Text = "button6";
+            button6.Text = "Mostrar datos";
             button6.UseVisualStyleBackColor = true;
             button6.Click += button6_Click;
             // 
@@ -217,7 +218,7 @@
             button7.Name = "button7";
             button7.Size = new Size(137, 23);
             button7.TabIndex = 16;
-            button7.Text = "button7";
+            button7.Text = "Mostrar datos";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
@@ -227,7 +228,7 @@
             button8.Name = "button8";
             button8.Size = new Size(137, 23);
             button8.TabIndex = 15;
-            button8.Text = "button8";
+            button8.Text = "Mostrar datos";
             button8.UseVisualStyleBackColor = true;
             button8.Click += button8_Click;
             // 
@@ -366,9 +367,10 @@
             label2.AutoSize = true;
             label2.Location = new Point(449, 74);
             label2.Name = "label2";
-            label2.Size = new Size(31, 15);
+            label2.Size = new Size(48, 15);
             label2.TabIndex = 31;
-            label2.Text = "salir ";
+            label2.Text = "Logout ";
+            label2.Click += label2_Click;
             // 
             // label3
             // 
