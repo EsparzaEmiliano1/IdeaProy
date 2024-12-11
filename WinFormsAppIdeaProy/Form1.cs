@@ -86,7 +86,7 @@ namespace WinFormsAppIdeaProy
             {
                 MessageBox.Show("El producto seleccionado no tiene un ID asignado.");
                 return;
-            }
+            }// creo esta advertencia no salta
 
             ProductoInfo productoSeleccionado = productos.FirstOrDefault(p => p.Id == productID);
 
@@ -103,8 +103,9 @@ namespace WinFormsAppIdeaProy
 
                 MessageBox.Show($"Producto {productoSeleccionado.Nombre} actualizado correctamente.");
             }
+
+            InicializarComboBox();
         }
-        
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -158,6 +159,8 @@ namespace WinFormsAppIdeaProy
             {
                 MessageBox.Show("Producto modificado con éxito.");
             }
+
+            InicializarComboBox();
         }
 
         private void labelNomProd1_Click(object sender, EventArgs e)
@@ -165,6 +168,142 @@ namespace WinFormsAppIdeaProy
 
         }
 
-       
+        private void buttonEliminar_Click(object sender, EventArgs e)
+        {
+            // Verifica que se haya seleccionado un producto en el ComboBox
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Por favor, selecciona un producto válido para eliminar o modificar.");
+                return;
+            }
+
+            // Obtén el nombre del producto seleccionado
+            string selectedName = comboBox1.SelectedItem.ToString();
+
+            // Obtén el ID del producto a partir del mapeo
+            if (!comboBoxMapping.TryGetValue(selectedName, out int productID))
+            {
+                MessageBox.Show("El producto seleccionado no tiene un ID asignado.");
+                return;
+            }
+
+            // Encuentra el producto en la lista
+            ProductoInfo productoSeleccionado = productos.FirstOrDefault(p => p.Id == productID);
+
+            if (productoSeleccionado == null)
+            {
+                MessageBox.Show("El producto seleccionado no está registrado en el sistema.");
+                return;
+            }
+
+            // Muestra los datos del producto
+            string datosProducto = $"ID: {productoSeleccionado.Id}\n" +
+                                   $"Nombre: {productoSeleccionado.Nombre}\n" +
+                                   $"Precio: {productoSeleccionado.Precio:C}\n" +
+                                   $"Stock: {productoSeleccionado.Stock}\n" +
+                                   $"Categoría: {productoSeleccionado.Categoria}";
+
+            DialogResult resultado = MessageBox.Show(
+                $"Datos del producto:\n\n{datosProducto}\n\n¿Deseas modificar este producto antes de eliminarlo?",
+                "Confirmación de Modificación",
+                MessageBoxButtons.YesNoCancel,
+                MessageBoxIcon.Question
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                // Abrir el formulario para modificar el producto
+                Form4 formMod = new Form4(productoSeleccionado);
+                if (formMod.ShowDialog() == DialogResult.OK)
+                {
+                    MessageBox.Show("Producto modificado con éxito. No se eliminó el producto.");
+                }
+            }
+            else if (resultado == DialogResult.No)
+            {
+                // Restablecer los valores predeterminados del producto
+                productoSeleccionado.Nombre = $"Producto {productoSeleccionado.Id}";
+                productoSeleccionado.Precio = 0m;
+                productoSeleccionado.Stock = 0;
+                productoSeleccionado.Categoria = "Sin categoría";
+
+                MessageBox.Show($"Producto {productoSeleccionado.Id} eliminado y restablecido a valores predeterminados.");
+            }
+            else
+            {
+                // Cancelar la operación
+                MessageBox.Show("Operación cancelada. El producto no fue modificado ni eliminado.");
+            }
+
+            // Actualiza el ComboBox para reflejar los cambios
+            InicializarComboBox();
+        }
+
+        private void MostrarDatosProducto(int productID)
+        {
+            // Encuentra el producto correspondiente en la lista
+            ProductoInfo productoSeleccionado = productos.FirstOrDefault(p => p.Id == productID);
+
+            if (productoSeleccionado == null)
+            {
+                MessageBox.Show("El producto no se encuentra registrado.");
+                return;
+            }
+
+            // Muestra los datos del producto
+            string datosProducto = $"ID: {productoSeleccionado.Id}\n" +
+                                   $"Nombre: {productoSeleccionado.Nombre}\n" +
+                                   $"Precio: {productoSeleccionado.Precio:C}\n" +
+                                   $"Stock: {productoSeleccionado.Stock}\n" +
+                                   $"Categoría: {productoSeleccionado.Categoria}";
+
+            MessageBox.Show(datosProducto, "Información del Producto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int productID = 1; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            int productID = 2; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int productID = 3; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int productID = 4; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            int productID = 5; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int productID = 6; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+        private void button7_Click(object sender, EventArgs e)
+        {
+            int productID = 7; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int productID = 8; // ID del producto que este botón siempre mostrará
+            MostrarDatosProducto(productID); // Llama a la función reutilizable
+        }
+
     }
 }
