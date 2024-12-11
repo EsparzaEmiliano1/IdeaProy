@@ -294,7 +294,7 @@ namespace WinFormsAppIdeaProy
             int productID = 6; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
         }
-        private void button7_Click(object sender, EventArgs e)
+        pgit rivate void button7_Click(object sender, EventArgs e)
         {
             int productID = 7; // ID del producto que este botón siempre mostrará
             MostrarDatosProducto(productID); // Llama a la función reutilizable
